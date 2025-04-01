@@ -1,7 +1,17 @@
 import "./App.module.scss";
+import Button from "./Button";
 
 function App() {
-  return <p styleName="wip">This is a work in progress</p>;
+  return (
+    <div styleName="wip">
+      <p>
+        With old compiler <button>button</button>
+      </p>
+      <p>
+        With just CSS modules <Button />
+      </p>
+    </div>
+  );
 }
 
 export default App;

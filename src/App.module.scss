@@ -3,6 +3,13 @@
   padding: 2rem;
 }
 
+button {
+  border: 0;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
 .wip {
   rotate: -45deg;
   font-size: 4rem;
@@ -14,4 +21,10 @@
   transform-origin: left;
   color: #f00;
   margin: 0;
+
+  p {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
 }

@@ -2,19 +2,13 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import svgr from "vite-plugin-svgr";
 // import path from "path";
+import { patchCssModules } from "vite-css-modules";
 
 export default defineConfig(() => {
   return {
     build: {
       outDir: "build",
-      cssCodeSplit: true,
-      manifest: true,
     },
-    // resolve: {
-    //   alias: {
-    //     src: path.resolve(__dirname, "./src"),
-    //   },
-    // },
     server: {
       port: 3000,
     },
@@ -40,16 +34,12 @@ export default defineConfig(() => {
         },
       }),
       svgr(),
+      patchCssModules(),
     ],
     css: {
       modules: {
         generateScopedName: "[path]___[name]__[local]",
       },
-      // preprocessorOptions: {
-      //   scss: {
-      //     api: "legacy", // removed in Vite 7
-      //   },
-      // },
     },
   };
 });
